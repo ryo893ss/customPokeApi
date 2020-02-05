@@ -9,6 +9,6 @@ class SearchPoleInfoServiceImpl : SearchPokeInfoService{
     override fun doExec() : String {
         val pokeApi = PokeApiClient()
         val bulbasaur = pokeApi.getPokemonSpecies(1)
-        return bulbasaur.name
+        return bulbasaur.toString()
     }
 }

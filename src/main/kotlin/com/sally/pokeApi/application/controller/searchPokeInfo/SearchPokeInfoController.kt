@@ -1,5 +1,6 @@
 package com.sally.pokeApi.application.controller.searchPokeInfo
 
+import com.sally.pokeApi.constants.ApiUrlPath
 import com.sally.pokeApi.domain.service.seachPokeInfo.SearchPokeInfoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -11,7 +12,7 @@ class SearchPokeInfoController {
     @Autowired
     lateinit var searchPokeInfoService : SearchPokeInfoService
 
-    @GetMapping("/searchPokeInfo")
+    @GetMapping(ApiUrlPath.SEARCH_POKE_INFO)
     fun getPokeInfo() : String {
         return searchPokeInfoService.doExec()
     }
